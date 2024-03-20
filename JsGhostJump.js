@@ -1,7 +1,7 @@
 //board
 var board;
 var boardWidth = 1380;
-var boardHeight = 750;
+var boardHeight = 751;
 var context;
 
 //doodler
