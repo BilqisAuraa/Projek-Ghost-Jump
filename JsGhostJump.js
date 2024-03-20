@@ -1,12 +1,17 @@
 //board
 var board;
 var boardWidth = 1380;
-var boardHeight = 750;
+var boardHeight = 751;
 var context;
 
 //doodler
+<<<<<<< HEAD
 var doodlerWidth = 191;
 var doodlerHeight = 100;
+=======
+var doodlerWidth = 190;
+var doodlerHeight = 150;
+>>>>>>> a9f99b01c68a86526932e87f5eff0fa6631038ce
 var doodlerX = boardWidth/2 - doodlerWidth/2;
 var doodlerY = boardHeight*7/8 - doodlerHeight;
 var doodlerRightImg;
