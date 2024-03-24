@@ -1,7 +1,7 @@
 //board
 var board;
 var boardWidth = 1380;
-var boardHeight = 751;
+var boardHeight = 750;
 var context;
 
 //doodler
@@ -116,11 +116,11 @@ function update() {
 
 function moveDoodler(e) {
     if (e.code == "ArrowRight" || e.code == "KeyD") { //gerak right
-        velocityX = 6;
+        velocityX = 4;
         doodler.img = doodlerRightImg;
     }
     else if (e.code == "ArrowLeft" || e.code == "KeyA") { //gerak left
-        velocityX = -6;
+        velocityX = -4;
         doodler.img = doodlerLeftImg;
     }
     else if (e.code == "Space" && gameOver) {
@@ -156,7 +156,7 @@ function placePlatforms() {
 
     platformArray.push(platform);
 
-    for (var i = 0; i < 8; i++) {
+    for (var i = 0; i < 6; i++) {
         var randomX = Math.floor(Math.random() * boardWidth*3/4); //(0-1) * boardWidth*3/4
         var platform = {
             img : platformImg,
