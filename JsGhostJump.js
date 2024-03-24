@@ -5,7 +5,7 @@ let boardHeight = 750;
 let context;
 
 //poci
-let pociWidth = 191;
+let pociWidth = 180;
 let pociHeight = 100;
 let pociX = boardWidth/2 - pociWidth/2;
 let pociY = boardHeight*7/8 - pociHeight;
@@ -33,8 +33,8 @@ let platformHeight = 100;
 let platformImg;
 
 let score = 0;
-let maxScore = 0;
-let gameOver = false;
+let HighScore = 0;
+/*let gameOver = false;*/
 
 window.onload = function() {
     board = document.getElementById("board");
@@ -64,7 +64,7 @@ window.onload = function() {
 
 function update() {
     requestAnimationFrame(update);
-    if (gameOver) {
+    /*if (gameOver) {
         return;
     }
     context.clearRect(0, 0, board.width, board.height);
@@ -106,12 +106,9 @@ function update() {
     //score
     updateScore();
     context.fillStyle = "white";
+    context.textAlign = ""
     context.font = "30px Times New Roman";
-    context.fillText(score, 15, 50);
-
-    if (gameOver) {
-        context.fillText("Game Over: Tekan 'Spasi' untuk Bermain", boardWidth/3, boardHeight*7/8);
-    }
+    context.fillText(`Score: ${Math.round(score)}`, boardWidth / 10, 50);
 }
 
 function movepoci(e) {
@@ -123,7 +120,12 @@ function movepoci(e) {
         velocityX = -4;
         poci.img = pociLeftImg;
     }
-    else if (e.code == "Space" && gameOver) {
+    document.getElementById("retry").addEventListener('click', function() {
+        hideEndMenu();
+        resetGame();
+        placePlatforms();
+    });
+    /*else if (e.code == "Space" && gameOver) {
         //reset
         poci = {
             img : pociRightImg,
@@ -139,8 +141,9 @@ function movepoci(e) {
         maxScore = 0;
         gameOver = false;
         placePlatforms();
-    }
+    }*/
 }
+
 
 function placePlatforms() {
     platformArray = [];
@@ -201,4 +204,20 @@ function updateScore() {
     else if (velocityY >= 0) {
         maxScore -= points;
     }
+}
+
+function ShowEndMenu() {
+    document.getElementById('end-game').style.display = 'block';
+    document.getElementById('end-game-score').innerHTML = score;
+
+    if(highScore < score) {
+        highScore = score;
+    }
+
+    document.getElementById('high-score').innerHTML = highScore;
+
+}
+
+function HideEndMenu() {
+    document.getElementById('end-game').style.display = 'none';
 }
