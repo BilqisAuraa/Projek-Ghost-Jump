@@ -64,7 +64,7 @@ window.onload = function() {
 
 function update() {
     requestAnimationFrame(update);
-    /*if (gameOver) {
+    if (gameOver) {
         return;
     }
     context.clearRect(0, 0, board.width, board.height);
