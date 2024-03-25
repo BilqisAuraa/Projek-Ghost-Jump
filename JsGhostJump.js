@@ -12,7 +12,7 @@ class Doodler {
         this.image.src = 'PociRight1.png'
         this.prevY = this.y;
         this.width = 40;
-        this.height = 70;
+        this.height = 120;
         this.vx = 0;
         this.vy = 0;
         this.gravity = 0.04;
