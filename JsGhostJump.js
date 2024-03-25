@@ -9,16 +9,16 @@ class Doodler {
         this.x = canvas.width / 2;
         this.y = canvas.height - 200;
         this.image = new Image();
-        this.image.src = 'PociRight.png'
+        this.image.src = 'PociRight1.png'
         this.prevY = this.y;
-        this.width = 70;
-        this.height = 100;
+        this.width = 40;
+        this.height = 70;
         this.vx = 0;
         this.vy = 0;
         this.gravity = 0.04;
         this.jumpStrength = -2.5;
     }
-
+    //Posisi Poci
     updatePosition() {
         this.prevY = this.y;
         this.x += this.vx;
@@ -32,7 +32,7 @@ class Doodler {
         this.checkForWrapDoodler();
         this.checkCollisionWithPlatforms();
     }
-
+    //Cek Poci keluar canvas
     checkForWrapDoodler() {
         if(this.x + this.width < 0) {
             this.x = canvas.width;
@@ -60,7 +60,7 @@ class Doodler {
             }
         }
     }
-
+    //Poci loncat 
     jump(platform) {
         let newHeight = platform.y - this.height;
         if(newHeight > (canvas.height / 2 - 120)) {
@@ -71,12 +71,12 @@ class Doodler {
 
     moveRight() {
         this.vx += 4;
-        this.image.src = 'PociRight.png';
+        this.image.src = 'PociRight1.png';
     }
 
     moveLeft () {
         this.vx -= 4;
-        this.image.src = 'PociLeft.png';
+        this.image.src = 'PociLeft1.png';
     }
 
     draw() {
@@ -94,7 +94,7 @@ class Platform {
         this.x = x;
         this.y = y;
         this.width = 100;
-        this.height = 50;
+        this.height = 60;
     }
 
     draw() {
@@ -102,7 +102,7 @@ class Platform {
     }
 
 }
-
+//acak platform
 let platForms = [];
 const doodler = new Doodler();
 
@@ -141,7 +141,7 @@ function addListeners() {
         }
     });
 
-    document.getElementById("retry").addEventListener('click', function() {
+    document.getElementById("coba-lagi").addEventListener('click', function() {
         hideEndMenu();
         resetGame();
         loop();

@@ -4,9 +4,7 @@ body {
     background-size: cover;
     margin: 0;
     padding: 0;
-    height: 800px;
-    justify-content: center;
-    align-items: center;
+    height: 700px;
 }
 
 #board {
@@ -15,7 +13,7 @@ body {
     background-color:black;
     width: 100;
     height: 500;
-    margin-left: 420px;
+    margin-left: 460px;
 }
 header {
     background-color: transparent;
@@ -26,10 +24,13 @@ header {
 }
 footer {
     background-color: transparent;
+    position: fixed;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     color: #fff;
-    text-align: center;
+    text-align:center;
     padding: 7px;
-    position: relative;
     bottom: 0;
 }
 .end-game {
