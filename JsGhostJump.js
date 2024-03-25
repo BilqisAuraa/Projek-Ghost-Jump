@@ -85,6 +85,8 @@ class Doodler {
 }
 
 class Platform {
+    // x horizontal position
+    // y vertical position
     constructor(x, y) {
         this.context = canvas.getContext("2d");
         this.image = new Image();
@@ -108,6 +110,7 @@ function randomInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 } 
 
+//menampilkan menu akhir game
 function showEndMenu() {
     document.getElementById('end-game').style.display = 'block';
     document.getElementById('end-game-score').innerHTML = score;
@@ -176,6 +179,7 @@ function resetGame() {
     setup();
 }
 
+//menampilkan score di tengah atas//
 function scoreText() {
     doodler.context.font = '20px Arial';
     doodler.context.fillStyle = 'white';
