@@ -2,17 +2,19 @@ body {
     font-family: Georgia;
     margin: 0;
     padding: 0;
-    background-color: #f0dfdf;
+    background-image: url('Assets/backgroundd.png');
+    background-position: top;
+    background-size:contain;
     font-size: large;
+    
 }
 header {
-    background-color: #741313;
+    background-color: transparent;
     color: #fff;
-    padding: 20px;
-    text-align: center;
+    margin-left: 5%;
 }
 .pict {
-    display: flex;
+    display: flex; 
     justify-content: center;
     width: 100%;
     height: 300px;
@@ -27,7 +29,7 @@ section {
     box-shadow: 3px 3px 5px 0px;
 }
 footer {
-    background-color: #741313;
+    background-color: transparent;
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -37,18 +39,17 @@ footer {
 }
 
 nav {
-    background-color: #444444;
+    background-color: transparent;
     color: #fff;
     padding: 10px 0;
-    text-align: center;
+    text-align: right;
+    margin-right: 5%;
 }
-
 nav a {
     color: #fff;
     text-decoration: none;
     margin: 0 10px;
 }
-
 nav a:hover {
     text-decoration: underline;
 }

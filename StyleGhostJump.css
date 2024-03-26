@@ -1,10 +1,11 @@
 body {
-    background-image: url('backgroundd.png');
+    background-image: url('Assets/backgroundd.png');
     background-repeat: no-repeat;
     background-size: cover;
-
+    font-family: Georgia;
+    font-size: large;
     margin: 0;
-     padding: 0;
+    padding: 0;
     height: 700px;
 }
 
@@ -15,13 +16,12 @@ body {
     width: 100;
     height: 500;
     margin-left: 460px;
+    margin-top: 30px;
 }
 header {
     background-color: transparent;
-    font-size: 20pt;
     color: #fff;
-    display: relative;
-    text-align: center;
+    margin-left: 5%;
 }
 footer {
     background-color: transparent;
@@ -79,15 +79,14 @@ nav {
     background-color: transparent;
     color: #fff;
     padding: 10px 0;
-    text-align: center;
+    text-align: right;
+    margin-right: 5%;
 }
-
 nav a {
     color: #fff;
     text-decoration: none;
     margin: 0 10px;
 }
-
 nav a:hover {
     text-decoration: underline;
 }

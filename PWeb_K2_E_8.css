@@ -2,44 +2,43 @@ body {
     font-family: Georgia;
     margin: 0;
     padding: 0;
-    background-color: #f0dfdf;
-    font-size:medium;
+    background-image: url('Assets/backgroundd.png');
+    background-size: cover;
+    font-size: large;
 }
 .pict {
     display: flex;
     justify-content: center;
 }
 div.container {
-    margin-left: 23%;
-    width:70%;
+    margin-left: 12%;
+    width:80%;
 }
 div.container div {
     padding: 1%;
     margin: 20px;
     width:27%;  
     float:left;
-    box-shadow: 3px 3px 5px 0px;
 }
+
 header {
-    background-color: #741313;
+    background-color: transparent;
     color: #fff;
-    padding: 20px;
-    text-align: center;
+    margin-left: 5%;
 }
 
 nav {
-    background-color: #444444;
+    background-color: transparent;
     color: #fff;
     padding: 10px 0;
-    text-align: center;
+    text-align: right;
+    margin-right: 5%;
 }
-
 nav a {
     color: #fff;
     text-decoration: none;
     margin: 0 10px;
 }
-
 nav a:hover {
     text-decoration: underline;
 }

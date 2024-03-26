@@ -9,7 +9,7 @@ class Doodler {
         this.x = canvas.width / 2;
         this.y = canvas.height - 200;
         this.image = new Image();
-        this.image.src = 'PociRight1.png'
+        this.image.src = 'Assets/PociRight1.png'
         this.prevY = this.y;
         this.width = 40;
         this.height = 120;
@@ -71,12 +71,12 @@ class Doodler {
 
     moveRight() {
         this.vx += 4;
-        this.image.src = 'PociRight1.png';
+        this.image.src = 'Assets/PociRight1.png';
     }
 
     moveLeft () {
         this.vx -= 4;
-        this.image.src = 'PociLeft1.png';
+        this.image.src = 'Assets/PociLeft1.png';
     }
 
     draw() {
@@ -90,7 +90,7 @@ class Platform {
     constructor(x, y) {
         this.context = canvas.getContext("2d");
         this.image = new Image();
-        this.image.src = 'Platform.png';
+        this.image.src = 'Assets/Platform.png';
         this.x = x;
         this.y = y;
         this.width = 100;
