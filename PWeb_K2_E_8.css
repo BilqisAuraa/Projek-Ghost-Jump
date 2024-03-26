@@ -26,35 +26,20 @@ header {
     padding: 20px;
     text-align: center;
 }
-navv a {
-    color: rgb(40, 40, 230);
+
+nav {
+    background-color: #444444;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
     text-decoration: none;
     margin: 0 10px;
 }
-navv a:hover {
+
+nav a:hover {
     text-decoration: underline;
-}
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 17%;
-    background-color: #f1f1f1;
-    position:absolute;
-    height:100%;
-    overflow: auto;
-}
-li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-li a.active {
-    background-color: #4b0808;
-    color: white;
-}
-li a:hover:not(.active) {
-    background-color: #555151;
-    color: white;
 }
